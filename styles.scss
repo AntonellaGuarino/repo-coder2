@@ -1,8 +1,48 @@
-$primary-color: #6a0dad;
-$text-color: #ffffff;
+// Variables de colores
+$primary-color: #6a0dad; // Color morado
+$bg-color: #1e1e1e; // Fondo oscuro
+$text-color: #ffffff; // Texto blanco
+$button-hover: #5500cc;
 
-body {
-  background: $primary-color;
-  color: $text-color;
-  font-family: Arial, sans-serif;
+
+.login-form {
+    background: $bg-color;
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    text-align: center;
+
+// Botones sociales
+    .social-login {
+margin: 1rem 0;
+
+button {
+        background: $secondary-color;
+        color: $bg-color;
+        border: none;
+        padding: 0.7rem 1rem;
+        margin: 0.5rem;
+        border-radius: 5px;
+        cursor: pointer;
+        &:hover {
+background: darken($secondary-color, 10%);
+        }
+}
+    }
+
+    // Botón principal
+    .email-btn {
+background: $primary-color;
+color: $text-color;
+border: none;
+padding: 0.7rem 1rem;
+border-radius: 5px;
+font-size: 1rem;
+cursor: pointer;
+transition: background 0.3s;
+
+&:hover {
+        background: $button-hover;
+}
+    }
 }

@@ -506,11 +506,11 @@ color: white;
 padding: 20px;
 font-size: 1rem;
 border-radius: 15px;
-transition: transform 0.3s ease-in-out; /* Suaviza la animación */
+transition: transform 0.3s ease-in-out;
 
 }
 .artistas-texto:hover{
-  transform: translateX(25px); /* Mueve el título 10px hacia la derecha */
+  transform: translateX(25px);
   background-image: linear-gradient(to right, #ec77ab 0%, #7873f5 100%); }   
 
 
@@ -519,7 +519,7 @@ transition: transform 0.3s ease-in-out; /* Suaviza la animación */
 font-size: 2.8rem;
 margin-bottom: 10px;
 font-weight: bold;
-transition: transform 0.3s ease-in-out; /* Suaviza la animación */
+transition: transform 0.3s ease-in-out;
 }
 
 
@@ -531,7 +531,7 @@ text-shadow: -2px 2px 0 #008cff, 2px -2px 0 #ca65ac;
 }   
 
 .artistas-texto h1:hover + p { 
-  opacity: 0; /* Desvanece el texto */
+  opacity: 0;
   transition: opacity 0.3s ease-in-out;
 }
 
@@ -586,28 +586,64 @@ color: inherit;
 display: inline-block;
 }
 
-@media (max-width: 768px) {
-.artistas-comunidad {
-flex-direction: column;
-gap: 10px;
-}
-    
-.artistas-texto {
-max-width: 100%;
-text-align: center;
-}
-    
-.artistas-galeria {
-grid-template-columns: repeat(2, 1fr);
-gap: 10px;
-} }
+@media (max-width: 480px) {
+  .artistas-comunidad {
+    flex-direction: column;
+    gap: 8px;
+    padding: 0 1rem;
+  }
 
-.tarjeta-enlace {
-text-decoration: none;
-color: inherit;
-display: inline-block; 
+  .artistas-texto {
+    max-width: 100%;
+    text-align: center;
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+
+  .artistas-galeria {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .tarjeta-enlace {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    padding: 8px 0;
+    font-size: 0.9rem;
+  }
 }
-    
+
+
+@media (min-width: 480px) and (max-width: 710px) {
+  .artistas-comunidad {
+    flex-direction: column;
+    gap: 12px;
+    padding: 0 1.5rem;
+  }
+
+  .artistas-texto {
+    max-width: 90%; 
+    text-align: center;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 0 auto;
+  }
+
+  .artistas-galeria {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .tarjeta-enlace {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    padding: 10px 0;
+    font-size: 1rem;
+  }
+}
+
 
 
 
@@ -1105,37 +1141,39 @@ small a {
   color: #fff;
   text-decoration: underline;
 }
-/* Responsive styles */
-@media (min-width: 768px) {
+
+
+
+
+@media (max-width: 768px) {
   .login-bg {
-    display: block;
+    display: none;
   }
 
   .login-container {
-    flex-direction: row;
+    flex-direction: column;
+    padding: 1rem;
   }
 
   .login-form {
-    padding: 60px;
+    padding: 20px;
   }
-}    .login-section {
-      height: 100vh;
-    }
-    .login-form-container {
-      background-color: #000; /* Fondo negro para el formulario */
-      color: #fff;
-      padding: 2rem;
-    }
-    .login-form-container h1 {
-      font-size: 2rem;
-      margin-bottom: 1.5rem;
-    }
-    .custom-btn {
-      background-color: #ffcc00;
-      color: #000;
-      border: none;
-    }
-    .custom-btn:hover {
-      background-color: #e6b800;
-      color: #000;
-    }
+
+  .login-section {
+    height: auto;
+  }
+
+  .login-form-container {
+    padding: 1.5rem;
+  }
+
+  .login-form-container h1 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .custom-btn {
+    width: 100%;
+    font-size: 1rem;
+  }
+}
